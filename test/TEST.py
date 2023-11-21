@@ -9,3 +9,6 @@ for i in student_csv_file_writer_open:
     print(i)
 
 #print(student_csv_file_writer_open)
+
+
+print('hello')
