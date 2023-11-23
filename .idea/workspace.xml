@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="532e502e-58de-45d8-a81b-54406a059c22" name="Changes" comment="echo &quot;# main-projects-file&quot; &gt;&gt; README.md &#10;  git init &#10;  git add README.md &#10;  git commit -m &quot;первая фиксация&quot; &#10;  git Branch -M main &#10;  git удаленное добавление источника https://github.com/cod01001/main- project-file.git&#10;   git push -u origin main">
+    <list default="true" id="532e502e-58de-45d8-a81b-54406a059c22" name="Changes" comment="save 1">
+      <change afterPath="$PROJECT_DIR$/lesson/logging_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson/exam_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson/exam_class.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/TEST.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/TEST.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/workouts" beforeDir="false" afterPath="$PROJECT_DIR$/workouts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/workouts/10.20.2023.py" beforeDir="false" afterPath="$PROJECT_DIR$/workouts/10.20.2023.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
       <recent name="C:\Users\Mark\PycharmProjects\pythonProjectSQLAlchemy\DZ" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TEST">
+  <component name="RunManager" selected="Python.exam_class (1)">
     <configuration name="10.20.2023" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pythonProjectSQLAlchemy" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,9 +160,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.exam_class (1)" />
         <item itemvalue="Python.TEST" />
         <item itemvalue="Python.10.20.2023" />
-        <item itemvalue="Python.exam_class (1)" />
         <item itemvalue="Python.Task_2 (1)" />
         <item itemvalue="Python.Task_2" />
       </list>
@@ -182,7 +184,42 @@
       <option name="project" value="LOCAL" />
       <updated>1700541870963</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="save 1">
+      <created>1700544685626</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544685626</updated>
+    </task>
+    <task id="LOCAL-00003" summary="save 1">
+      <created>1700544785975</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544785975</updated>
+    </task>
+    <task id="LOCAL-00004" summary="save 1">
+      <created>1700544796471</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544796471</updated>
+    </task>
+    <task id="LOCAL-00005" summary="save 1">
+      <created>1700544917746</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544917746</updated>
+    </task>
+    <task id="LOCAL-00006" summary="save 1">
+      <created>1700544938317</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1700544938317</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,7 +235,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="echo &quot;# main-projects-file&quot; &gt;&gt; README.md &#10;  git init &#10;  git add README.md &#10;  git commit -m &quot;первая фиксация&quot; &#10;  git Branch -M main &#10;  git удаленное добавление источника https://github.com/cod01001/main- project-file.git&#10;   git push -u origin main" />
-    <option name="LAST_COMMIT_MESSAGE" value="echo &quot;# main-projects-file&quot; &gt;&gt; README.md &#10;  git init &#10;  git add README.md &#10;  git commit -m &quot;первая фиксация&quot; &#10;  git Branch -M main &#10;  git удаленное добавление источника https://github.com/cod01001/main- project-file.git&#10;   git push -u origin main" />
+    <MESSAGE value="save 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="save 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

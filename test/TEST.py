@@ -1,14 +1,19 @@
-import csv
+import logging
 
-# открытие файла в формате чтения и юникода UTF-8
-student_csv_file = open('../lesson/student_csv_file.csv', encoding='UTF-8')
-# говорим что будет считывать из csv файла
-student_csv_file_writer_open = csv.reader(student_csv_file, delimiter=';')
+def log_operation(x, y, result):
+    try:
+        with open('log.txt', 'a') as log_file:
+            log_file.write(f'Операция: {x} + {y} = {result}\n')
+    except Exception as e:
+        print(f'Произошла ошибка при записи в файл: {e}')
 
-for i in student_csv_file_writer_open:
-    print(i)
+def my_function(x, y):
+    try:
+        result = x + y
+        log_operation(x, y, result)
+        return result
+    except Exception as e:
+        print(f'Произошла ошибка при выполнении операции: {e}')
 
-#print(student_csv_file_writer_open)
-
-
-print('hello')
+result = my_function(2, 3)
+print(f'Результат: {result}')
