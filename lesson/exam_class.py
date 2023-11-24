@@ -4,6 +4,14 @@ import logging
 # print('Здравствуй пользователь, тебя приветствует система учета студентов колледжа имени Яны Сергеевны Щавель\n')
 
 
+logging.basicConfig(level=logging.INFO, filename="py_log.log", filemode="w",
+                    format="%(asctime)s %(levelname)s %(message)s", encoding='UTF-8')
+logging.debug("A DEBUG Message")
+logging.info("An INFO")
+logging.warning("A WARNING")
+logging.error("An ERROR")
+logging.critical("A message of CRITICAL severity")
+
 
 class Student:
     def __init__(self, student_name, student_age, student_course):
@@ -18,14 +26,17 @@ class Student:
     def add_passed_exames(self, grade):
         self.list_of_passed_exams.append(grade)
         self.gpa_student = sum(self.list_of_passed_exams) / len(self.list_of_passed_exams)
+        logging.info(f"Добавили студенту: {self.student_name} оценку: {str(grade)} всего оценок:{self.list_of_passed_exams}")
         return self.gpa_student
 
     # 5. Напишите методы для расчета возможности перевода студента на следующий курс,
     # а также для добавления и удаления экзаменов у студента.
     def transferring_a_student_to_the_next_course(self):
-        if len(self.list_of_passed_exams) > 5 and self.gpa_student > 3:
+        if len(self.list_of_passed_exams) >= 5 and self.gpa_student > 3:
             self.student_course += 1
-            return self.student_name, ' перешел на ', self.student_course, ' курс.'
+            logging.info(
+                f"Студент: {self.student_name} переходит на курс {self.student_course}.")
+            return f"Студент {self.student_name} переходит на {self.student_course} курс."
         elif len(self.list_of_passed_exams) < 5 or self.gpa_student < 3:
             return 'студент пока не может перейти на следующий курс'
 
@@ -55,7 +66,11 @@ class Student:
 
         print('Средний балл всех студентов', x / p)
 
-
+    # 4. Создайте функции для сохранения информации о студентах в файле, а также для загрузки этой информации из файла.
+    @staticmethod
+    def loading_all_students_from_a_file():
+        with open('student_csv_file.csv', 'r', encoding='UTF-8', newline='') as f:
+            return f.read()
 
 class University:
     def __init__(self):
@@ -83,15 +98,17 @@ class University:
 
 
 
-@logging
-def log(*args,**kwargs):
-    logging.basicConfig(level=logging.INFO, filename="py_log.log", filemode="w",
-                        format="%(asctime)s %(levelname)s %(message)s", encoding='UTF-8')
-    logging.debug("A DEBUG Message")
-    logging.info("An INFO")
-    logging.warning("A WARNING")
-    logging.error("An ERROR")
-    logging.critical("A message of CRITICAL severity")
+# @logging
+# def log(*args,**kwargs):
+#     logging.basicConfig(level=logging.INFO, filename="py_log.log", filemode="w",
+#                         format="%(asctime)s %(levelname)s %(message)s", encoding='UTF-8')
+#     logging.debug("A DEBUG Message")
+#     logging.info("An INFO")
+#     logging.warning("A WARNING")
+#     logging.error("An ERROR")
+#     logging.critical("A message of CRITICAL severity")
+
+
 
 
 
@@ -110,6 +127,8 @@ student_2.add_passed_exames(3)
 student_3.add_passed_exames(5)
 student_3.add_passed_exames(5)
 student_3.add_passed_exames(5)
+student_3.add_passed_exames(5)
+student_3.add_passed_exames(5)
 
 mgsiit = University()
 mgsiit.add_student(student_1)
@@ -118,14 +137,19 @@ mgsiit.add_student(student_3)
 
 mgsiit.student_save_file()
 
-student_1.transferring_a_student_to_the_next_course()
+#print(student_3.transferring_a_student_to_the_next_course())
 
+print(Student.loading_all_students_from_a_file())
 
-print(student_1.scholarship())
+#print(mgsiit.total_gpa_students())
+
+#print(student_1.scholarship())
 # средний балл всех студентов
 # Student.overall_gpa()
 
+#with open('student_csv_file.csv', 'r', encoding='UTF-8') as f:
 
-# 4. Создайте функции для сохранения информации о студентах в файле, а также для загрузки этой информации из файла.
+
+
 
 # 7. Примените декораторы для реализации логирования операций по учету студентов.
