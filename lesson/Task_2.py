@@ -1,7 +1,7 @@
 import csv
 import json
 import time
-
+import copy
 
 # 1. Напишите программу на Python, которая принимает на вход строку и проверяет, состоит ли она только из цифр.
 # Если да, программа должна вывести сумму всех цифр, если нет - вывести сообщение о том, что строка не является числом.
@@ -120,20 +120,28 @@ def track_of_time_decorator(func):
 # нет слов, одни буквы
 def dict_word(sp):
     word_count = set()
-    dict_word = {}
-    x = []
+    dict_word = []
+    len_sp = len(sp)
+    x = dict()
     for i in sp:
         word_count.add(i[0])
 
 
-    for i2 in sp:
-        if i2 in word_count:
-            x.append(i2)
+    for i in word_count:
 
-    print(word_count)
+        for i2 in sp:
+
+            if i2[0] is i:
+
+                dict_word.append(i2)
+
+        x[i] = [dict_word.copy()]
+        dict_word.clear()
+    print(x)
+
 
     #print(word_count)
-sp = ["apple", "banana", "orange", "grape", "kiwi", "pear", "peach", "plum", "cherry"]
+sp = ["apple","ananas", "banana", "orange", "grape", "kiwi", "pear", "peach", "plum", "cherry"]
 dict_word(sp)
 
 #{'a', 'k', 'g', 'b', 'c', 'o', 'p'}
