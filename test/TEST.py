@@ -1,19 +1,14 @@
-import logging
+# In this kata you should simply determine, whether a given year is a leap year or not. In case you don't know the rules, here they are:
+#
+# Years divisible by 4 are leap years,
+# but years divisible by 100 are not leap years,
+# but years divisible by 400 are leap years.
+# Tested years are in range 1600 ≤ year ≤ 4000.
 
-def log_operation(x, y, result):
-    try:
-        with open('log.txt', 'a') as log_file:
-            log_file.write(f'Операция: {x} + {y} = {result}\n')
-    except Exception as e:
-        print(f'Произошла ошибка при записи в файл: {e}')
+year = 2100
+if year % 4 == 0 and (year % 400 == 0 or year % 100 != 0):
+    print(year)
+else:
+    print('yt')
 
-def my_function(x, y):
-    try:
-        result = x + y
-        log_operation(x, y, result)
-        return result
-    except Exception as e:
-        print(f'Произошла ошибка при выполнении операции: {e}')
 
-result = my_function(2, 3)
-print(f'Результат: {result}')
